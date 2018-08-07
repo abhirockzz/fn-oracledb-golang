@@ -1,0 +1,15 @@
+name: fn-oradb-go-delete-func
+version: 0.0.1
+runtime: go
+entrypoint: ./func
+build_image: abhirockzz/go-ora-driver
+run_image: abhirockzz/go-ora-driver
+format: json
+path: /delete
+config:
+  DB_PASSWORD: <your password>
+  DB_HOST: <DB IP/host>
+  DB_USER: <username>
+  DB_PORT: <port e.g. 1521>
+  DB_SERVICE_NAME: <DB service name>
+  IS_SYSDBA: <is user sysdba ? valid values are true or false e.g. in case of sys user, this would be true>
