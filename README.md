@@ -10,9 +10,7 @@
 
 - `fn start`
 
-From a different terminal
-
-if you want to test locally ignore the next two steps
+Configure Docker
 
 - `docker login` (use your docker registry credentials)
 - `export FN_REGISTRY=<name of your docker repository>`
@@ -22,11 +20,11 @@ if you want to test locally ignore the next two steps
 Moving on....
 
 - `cd fn-oracledb-golang`
-- `fn -v deploy --all --local` (`-v` will activate verbose mode)
+- `fn -v deploy --all` (`-v` will activate verbose mode)
 
-> `--local` will build & push docker images locally (and run it from there). Remove it if you want use a dedicated/external Docker registry
+> adding `--local` to above command will build & push docker images locally (and run it from there). Remove it if you want use a dedicated/external Docker registry
 
-All your functions (create, read, update, delete) should now be deployed. Check it using `fn inspect app fn-oradb-go-app` and `fn list routes --app fn-oradb-go-app`
+All your functions (create, read, update, delete) should now be deployed. Check it using `fn inspect app fn-oradb-go-app` and `fn list routes fn-oradb-go-app`
 
 ## Behind the scenes
 
